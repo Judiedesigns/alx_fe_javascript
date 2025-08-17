@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quote App</title>
+  <title>Quotes App</title>
 </head>
 <body>
-  <h1>Quote App</h1>
+  <h1>Quotes App</h1>
 
-  <!-- Dropdown filter -->
-  <label for="categoryFilter">Filter by category:</label>
-  <select id="categoryFilter">
-    <option value="all">All</option>
-  </select>
+  <button id="showQuote">Show Random Quote</button>
+  <p id="quoteDisplay"></p>
 
-  <!-- Button to show random quote -->
-  <button id="showQuoteBtn">Show Random Quote</button>
+  <h2>Add a Quote</h2>
+  <input type="text" id="newQuote" placeholder="Enter a new quote">
+  <button id="addQuote">Add Quote</button>
 
-  <!-- Display area -->
-  <div id="quoteDisplay"></div>
+  <h2>Export Quotes</h2>
+  <button id="exportQuotes">Export Quotes</button>
+
+  <h2>Sync Status</h2>
+  <p id="syncStatus">Not synced yet.</p>
 
   <script src="script.js"></script>
 </body>
