@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quote Keeper</title>
-</head>
-<body>
-  <h1>Quote Keeper</h1>
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quote Generator</title>
+  </head>
+  <body>
+    <h1>Dynamic Quote Generator</h1>
+    <div id="quoteDisplay"></div>
+    <button id="exportBtn">Export Quotes</button>
 
-  <!-- Add Quote Form -->
-  <form id="quoteForm">
-    <input type="text" id="quoteInput" placeholder="Enter a quote" required>
-    <button type="submit">Add Quote</button>
-  </form>
+    
+    <script src="script.js"></script>
+  </body>
+  </html>
 
-  <!-- Quotes List -->
-  <ul id="quoteList"></ul>
-
-  <!-- Export Quotes -->
+  <button id="showQuoteBtn">Show Quote</button>
+  <button id="addQuoteBtn">Add Quote</button>
+  <input type="file" id="importFile" accept=".json" />
   <button id="exportBtn">Export Quotes</button>
-
-  <!-- Import Quotes -->
-  <input type="file" id="importFile" accept="application/json">
-  <button id="importBtn">Import Quotes</button>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <p id="quoteDisplay"></p>
