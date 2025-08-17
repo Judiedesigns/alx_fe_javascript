@@ -4,7 +4,7 @@ let quotes = [
   { text: "Push yourself, because no one else is going to do it for you.", category: "Motivation" }
 ];
 
-function displayRandomQuote() {
+function showRandomQuote() {
   let randomIndex = Math.floor(Math.random() * quotes.length);
   let randomQuote = quotes[randomIndex];
   let quoteDisplay = document.getElementById("quoteDisplay");
@@ -22,7 +22,6 @@ function addQuote() {
 
   quotes.push({ text: newText, category: newCategory });
 
-  // Update the DOM immediately
   let quoteDisplay = document.getElementById("quoteDisplay");
   quoteDisplay.innerHTML = `"${newText}" — <em>${newCategory}</em>`;
 
@@ -30,6 +29,7 @@ function addQuote() {
   document.getElementById("newQuoteCategory").value = "";
 }
 
-// Attach event listeners
-document.getElementById("newQuote").addEventListener("click", displayRandomQuote);
-document.querySelector("button[onclick='addQuote()']").addEventListener("click", addQuote);
+// Event listeners
+document.getElementById("newQuote").addEventListener("click", showRandomQuote);
+document.querySelector("button[onclick='addQuote()']").removeAttribute("onclick");
+document.querySelector("button").addEventListener("click", addQuote);
