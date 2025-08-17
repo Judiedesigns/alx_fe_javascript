@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quotes App</title>
+  <title>Quote App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #quoteDisplay { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+    #status { margin-top: 10px; color: green; font-weight: bold; }
+  </style>
 </head>
 <body>
-  <h1>Quotes App</h1>
+  <h1>Quote App</h1>
+  <button id="newQuoteBtn">Show Random Quote</button>
+  <div id="quoteDisplay">Your quote will appear here</div>
 
-  <button id="showQuote">Show Random Quote</button>
-  <p id="quoteDisplay"></p>
+  <form id="quoteForm">
+    <h3>Add a New Quote</h3>
+    <input type="text" id="quoteInput" placeholder="Enter a new quote" required />
+    <button type="submit">Add Quote</button>
+  </form>
 
-  <h2>Add a Quote</h2>
-  <input type="text" id="newQuote" placeholder="Enter a new quote">
-  <button id="addQuote">Add Quote</button>
-
-  <h2>Export Quotes</h2>
-  <button id="exportQuotes">Export Quotes</button>
-
-  <h2>Sync Status</h2>
-  <p id="syncStatus">Not synced yet.</p>
+  <div id="status"></div>
 
   <script src="script.js"></script>
 </body>
